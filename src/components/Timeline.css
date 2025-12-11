@@ -1,0 +1,94 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-item {
+  margin: 20px 0;
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0D47A1; /* Primary color from MUI theme */
+  border-radius: 50%;
+}
+
+.timeline-item h6 {
+  font-weight: bold;
+}
+
+.timeline-item p {
+  margin: 5px 0;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 200px; /* Fixed height for cards */
+  display: flex;
+  flex-direction: column; /* Ensure contents stack vertically */
+  justify-content: space-between; /* Distribute space */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.card:first-of-type {
+  border: 2px solid #cac3a4; /* Highlight current job with a border */
+}
+
+.card-content {
+  padding: 16px; /* Padding inside cards */
+}
+
+.icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Animation effect */
+@keyframes dropIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: dropIn 0.5s ease forwards;
+  -webkit-animation: dropIn 0.5s ease forwards;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+
+  .timeline-item:before {
+    left: 10px;
+  }
+}
+
+

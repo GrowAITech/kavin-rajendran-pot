@@ -1,0 +1,95 @@
+.hero-section {
+  background-image: url('../assets/images/hero-bg.jpg');
+  background-size: cover; /* Ensure the image covers the section */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: #000;
+  padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Crazy, bold font for main text */
+.hero-section h3 {
+  font-family: 'Poppins', sans-serif; /* Use Google Fonts like Poppins for a modern look */
+  font-weight: 800; /* Super bold */
+  font-size: 3rem; /* Large font size */
+  letter-spacing: 2px; /* Increased spacing between letters */
+  text-transform: uppercase; /* Make text uppercase */
+  color: #061664; /* Bright color (you can adjust this) */
+}
+
+/* Style for smaller text */
+.hero-section h5 {
+  font-family: 'Montserrat', sans-serif; /* Use a different font for contrast */
+  font-weight: 700; /* Bold for smaller text */
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) { /* Large tablets */
+  .hero-section {
+    height: 80vh; /* Reduce height on larger tablets */
+  }
+
+  .hero-section h3 {
+    font-size: 2.5rem; /* Slightly smaller font size */
+  }
+
+  .hero-section h5 {
+    font-size: 1.25rem; /* Smaller font size */
+  }
+}
+
+@media (max-width: 768px) { /* Tablets */
+  .hero-section {
+    height: 70vh; /* Further reduce height on tablet */
+  }
+
+  .hero-section h3 {
+    font-size: 2rem; /* Smaller font size for tablets */
+  }
+
+  .hero-section h5 {
+    font-size: 1.1rem; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .hero-section {
+    height: 60vh; /* Further reduce height on mobile */
+    justify-content: center; /* Center content */
+    text-align: center; /* Center text */
+    padding: 0 10px; /* Reduce padding for mobile */
+  }
+
+  .hero-section h3 {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  .hero-section h5 {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+}

@@ -1,0 +1,61 @@
+.navbar {
+    background-color: #333; /* Background color for the navbar */
+    transition: background-color 0.3s ease; /* Smooth transition for scroll effect */
+    z-index: 10; /* Ensures navbar is above other content */
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background when scrolled */
+  }
+  
+  .nav-buttons {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .animated-button {
+    margin: 0 10px; /* Spacing between buttons */
+    text-transform: uppercase; /* Uppercase text for buttons */
+    font-weight: bold; /* Bold text */
+    position: relative; /* For hover effect */
+  }
+  
+  .animated-button:hover {
+    color: #069ED6; /* Color change on hover */
+  }
+  
+  @media (max-width: 600px) {
+    .nav-buttons {
+      display: none; /* Hide buttons on small screens, use drawer instead */
+    }
+  }
+  
+  /* Drawer styles */
+  .MuiDrawer-paper {
+    background-color: #444; /* Background color for the drawer */
+    color: #fff; /* Text color in the drawer */
+  }
+  
+  .MuiListItemText-root {
+    color: #fff; /* Text color for ListItemText */
+  }
+  
+  .MuiListItem-button:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Hover effect for ListItem */
+  }
+  
+  /* Menu styles */
+  .MuiMenu-paper {
+    background-color: #444; /* Background color for the menu */
+    color: #fff; /* Text color for menu items */
+  }
+  
+  .MuiMenuItem-root:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Hover effect for MenuItem */
+  }
+  
+  /* Button with icon styles */
+  .animated-button svg {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
